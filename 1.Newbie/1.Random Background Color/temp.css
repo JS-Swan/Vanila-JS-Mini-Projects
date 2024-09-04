@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    gap: 20px;
+}
+h1{
+    padding: 1rem 2rem;
+    background: silver;
+    border-radius: 15px;
+
+}
+#one{
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.2s;
+}
+#one:hover{
+    background: rgb(121, 121, 121);
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+}
