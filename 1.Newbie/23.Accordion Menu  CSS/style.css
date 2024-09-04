@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    max-width: 600px;
+    /* min-height: 100vh; */
+    padding: 0 20px;
+}
+.wrapper .parent-tab,
+.wrapper .child-tab{
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.wrapper .parent-tab label,
+.wrapper .child-tab label{
+     background: #477efe;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 10px 20px;
+     border-radius: 4px;
+     position: relative;
+     z-index: 99;
+     cursor: pointer;
+}
+.wrapper label span{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    text-shadow: 0 -1px 1px #0056b3;
+}
+.child-tab label span{
+    font-size: 16px;
+}
+.wrapper label .icon{
+   height: 30px;
+   width: 30px;
+   font-size: 16px;  
+   color: #5889f9;
+   background: white;
+   text-shadow: 0 -1px 1px #0056b3;
+   display: block;
+   border-radius: 50%;
+   position: relative;
+}
+.wrapper label .icon i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+.wrapper .parent-tab .content ,
+.wrapper .child-tab .sub-content{
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+} 
+.wrapper .parent-tab .content p,
+.wrapper .child-tab .sub-content p
+{
+    font-size: 15px;
+    padding: 15px 20px;
+}
+.wrapper input{
+    display: none;
+}
+.parent-tab input:checked ~ .content,
+.child-tab input:checked ~ .sub-content{
+    max-height: 100vh;
+}
+.tab-3 input:checked ~ .content{
+    padding: 15px 20px;
+}
+
+.parent-tab input:checked ~ label .icon i::before,
+.child-tab input:checked ~ label .icon i::before{
+    content: '\f068';
+}
